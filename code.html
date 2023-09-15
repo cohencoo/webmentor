@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="dashboard.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="topic">1.1. Understanding the Internet and the World Wide Web</h1>
+            <center>
+                <br /><br />
+                <iframe
+                    width="560"
+                    height="315"
+                    title="YouTube video player"
+                    src="https://www.youtube.com/embed/C72WkcUZvco?si=36oVIvHv6c-eSHhy"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
+            </center>
+            <hr />
+            <div class="lesson">
+                <p>
+                    In this lesson, we will delve into the fundamental concepts of the Internet and
+                    the World Wide Web (WWW). Before you start your journey into web development,
+                    it's crucial to have a solid grasp of these concepts, as they form the backbone
+                    of the digital world.
+                </p>
+
+                <h3>What is the Internet?</h3>
+
+                <p>
+                    The Internet, short for "interconnected networks," is a global network of
+                    computers and devices that communicate with each other through a standardized
+                    set of protocols. It's a vast, decentralized network that connects millions of
+                    computers worldwide, enabling them to share information and resources
+                    seamlessly. Think of the Internet as the infrastructure that makes online
+                    communication and data exchange possible.
+                </p>
+
+                <h3>The World Wide Web (WWW)</h3>
+
+                <p>
+                    The World Wide Web, often referred to as the "Web," is a subset of the Internet.
+                    It's a system of interconnected documents and resources linked by hyperlinks and
+                    URLs (Uniform Resource Locators). When you open a web browser and access a
+                    website, you are interacting with the World Wide Web.
+                </p>
+
+                <h4>Key points about the World Wide Web:</h4>
+
+                <ol>
+                    <li>
+                        <strong>Web Pages:</strong> Web pages are the building blocks of the Web.
+                        They are documents containing text, images, videos, and other multimedia
+                        elements. Each web page has a unique address called a URL.
+                    </li>
+                    <li>
+                        <strong>Hyperlinks:</strong> Hyperlinks (or links) are clickable elements
+                        within web pages that allow you to navigate between different web pages and
+                        websites. They are the foundation of how information is interconnected on
+                        the Web.
+                    </li>
+                    <li>
+                        <strong>Web Browsers:</strong> Web browsers are software applications (e.g.,
+                        Chrome, Firefox, Safari) that allow users to access and view web pages. They
+                        interpret HTML and CSS to render web content.
+                    </li>
+                </ol>
+
+                <h3>How Does It Work?</h3>
+
+                <p>
+                    The Internet and the World Wide Web work together to deliver web content to your
+                    device. Here's a simplified overview of the process:
+                </p>
+
+                <ol>
+                    <li>
+                        <strong>You Request a Web Page:</strong> When you enter a URL (e.g.,
+                        www.example.com) in your web browser's address bar and press Enter, you're
+                        requesting a specific web page.
+                    </li>
+                    <li>
+                        <strong>The Request is Sent:</strong> Your request travels through a series
+                        of routers and servers to reach the web server hosting the requested page.
+                    </li>
+                    <li>
+                        <strong>The Web Server Responds:</strong> The web server processes your
+                        request, retrieves the requested web page, and sends it back to your
+                        browser.
+                    </li>
+                    <li>
+                        <strong>Rendering the Page:</strong> Your web browser receives the web
+                        page's HTML, CSS, and other assets and renders them on your screen, creating
+                        the visual web page you see.
+                    </li>
+                </ol>
+
+                <h3>The Internet vs. The World Wide Web</h3>
+
+                <p>
+                    It's important to note that the Internet and the World Wide Web are not the
+                    same:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Internet:</strong> The infrastructure and global network of
+                        interconnected devices and networks.
+                    </li>
+                    <li>
+                        <strong>World Wide Web:</strong> A system of interconnected web pages and
+                        resources accessed through web browsers.
+                    </li>
+                </ul>
+
+                <p>
+                    Understanding this distinction will be valuable as you continue your journey
+                    into web development.
+                </p>
+
+                <h3>Conclusion</h3>
+
+                <p>
+                    In this lesson, we've laid the foundation for your web development journey by
+                    introducing you to the concepts of the Internet and the World Wide Web. These
+                    concepts are essential to comprehend as you dive deeper into web development,
+                    where you'll create and manipulate web pages within this interconnected digital
+                    realm.
+                </p>
+
+                <p>
+                    In the next lessons, we'll explore the basic building blocks of web development,
+                    starting with HTML, the language used to structure web content. So, let's get
+                    started on your path to becoming a web developer!
+                </p>
+            </div>
+        </div>
+
+        <center>
+            <h1>Test your understanding</h1>
+            <hr />
+            <iframe
+                src="component/card.html"
+                style="width: 850px; height: 500px;"
+                frameborder="0"
+            ></iframe>
+
+            <br /><br />
+
+            <hr />
+
+            <h1>Now apply your skills</h1>
+            <p>Use the HTML/CSS editor below to show-off the knowledge you've learned!</p>
+            <br /><br />
+        </center>
+
+        <div class="testing-area">
+            <div
+                style="
+                    display: flex;
+                    height: 500px;
+                    gap: 10px;
+                    background: #222;
+                    padding: 1rem;
+                    justify-content: space-between;
+                "
+            >
+                <textarea id="html" placeholder="Write your HTML here..."></textarea>
+                <textarea id="css" placeholder="Write your CSS here..."></textarea>
+                <div style="width: 33.33%; background: #333;" id="render"></div>
+            </div>
+        </div>
+        <script src="nav.js"></script>
+        <script>
+            const html = document.getElementById("html")
+            const css = document.getElementById("css")
+            const render = document.getElementById("render")
+
+            // read the query string
+            const queryString = window.location.search
+            const urlParams = new URLSearchParams(queryString)
+            const topic = urlParams.get("q")
+
+            if (topic) document.getElementById("topic").innerText = topic
+
+            function renderDOM() {
+                render.innerHTML = html.value
+                const style = document.createElement("style")
+                style.innerHTML = css.value
+                render.appendChild(style)
+            }
+
+            html.addEventListener("keyup", renderDOM)
+            css.addEventListener("keyup", renderDOM)
+        </script>
+    </body>
+</html>

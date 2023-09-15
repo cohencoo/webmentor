@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flashcard with 3D Flip Animation</title>
+        <link rel="stylesheet" href="dashboard.css" />
+        <style>
+            .flashcard {
+                width: 800px;
+                height: 400px;
+                perspective: 1000px;
+            }
+
+            .card {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 1s;
+            }
+
+            .front,
+            .back {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                box-shadow: 1px 1px 12px white;
+                font-size: 2rem;
+                background-color: #222;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                border-radius: 1rem;
+            }
+
+            .front {
+                transform: rotateY(0deg);
+            }
+
+            .back {
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flashcard">
+            <div
+                onclick="this.style.transform = 'rotateY(180deg)'; document.getElementById('next').style.opacity='1' "
+                class="card"
+            >
+                <div class="front">
+                    <p>
+                        What does WWW stand for? <br /><span style="font-size: 20px; color: #999;"
+                            >(Click to see answer)</span
+                        >
+                    </p>
+                </div>
+                <div class="back">
+                    <p>WWW stands for World Wide Web.</p>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <button
+                id="next"
+                onclick="location.reload()"
+                style="margin-top: 2rem; opacity: 0; transition: 1s;"
+            >
+                Next
+            </button>
+        </center>
+    </body>
+</html>
