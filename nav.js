@@ -7,11 +7,10 @@ nav.innerHTML = `
             location.pathname.includes("dashboard") ? 'class="active"' : ""
         } href="./dashboard.html">Dashboard</a>
         <a ${
-            location.pathname.includes("code") ? 'class="active"' : ""
-        } href="./code.html">Practice</a>
+            location.pathname.includes("practice") ? 'class="active"' : ""
+        } href="./practice.html">Practice</a>
     </div>
     <div class="buttons">
-        <button style="background: rgba(255, 255, 255, 0.1); color: white;">Account</button>
         <button>Logout</button>
     </div>
 `

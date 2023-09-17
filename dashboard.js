@@ -1,11 +1,7 @@
 const courseOutline = [
     {
         module: "Module 1: Introduction to Web Development",
-        topics: [
-            "1.1. Understanding the Internet and the World Wide Web",
-            "1.2. Basics of Web Browsers and How They Work",
-            "1.3. Overview of Website Development Tools",
-        ],
+        topics: ["1.1. Understanding the Internet and the World Wide Web"],
     },
     {
         module: "Module 2: HTML Fundamentals",
@@ -45,13 +41,7 @@ const courseOutline = [
     },
     {
         module: "Module 5: Web Development Best Practices",
-        topics: [
-            "5.1. Ensuring Accessibility and Semantic Markup",
-            "5.2. Validating HTML and CSS",
-            "5.3. SEO Basics for Web Developers",
-            "5.4. Introduction to Version Control (e.g., Git)",
-            "5.5. Web Hosting and Domain Basics",
-        ],
+        topics: ["5.1. Ensuring Accessibility and Semantic Markup", "5.2. Validating HTML and CSS"],
     },
     {
         module: "Module 6: Final Project",
@@ -60,22 +50,6 @@ const courseOutline = [
             "6.2. Building a Simple Website",
             "6.3. Troubleshooting and Debugging",
             "6.4. Presenting Your Project",
-        ],
-    },
-    {
-        module: "Module 7: Beyond the Basics (Optional)",
-        topics: [
-            "7.1. Introduction to JavaScript and Interactivity",
-            "7.2. Working with CSS Frameworks (e.g., Bootstrap)",
-            "7.3. Introduction to Content Management Systems (e.g., WordPress)",
-        ],
-    },
-    {
-        module: "Module 8: Career and Further Learning Opportunities",
-        topics: [
-            "8.1. Exploring Career Paths in Web Development",
-            "8.2. Resources for Continuous Learning",
-            "8.3. Joining Web Development Communities",
         ],
     },
 ]

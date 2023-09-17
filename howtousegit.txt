@@ -1,0 +1,6 @@
+to push to github:
+
+
+git add -A
+git commit -m "your message/info about what you committed"
+git push
