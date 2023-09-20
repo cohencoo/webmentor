@@ -8,47 +8,9 @@
     </head>
     <body>
         <div class="container">
-            <h1 id="topic">1.1. Understanding the Internet and the World Wide Web</h1>
-            <center>
-                <br /><br />
-                <iframe
-                    width="560"
-                    height="315"
-                    title="YouTube video player"
-                    src="https://www.youtube.com/embed/C72WkcUZvco?si=36oVIvHv6c-eSHhy"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                ></iframe>
-            </center>
-            <hr />
+            <h1 id="topic"></h1>
             <div class="lesson">
-                <p>
-                    In this lesson, we will delve into the fundamental concepts of the Internet and
-                    the World Wide Web (WWW). Before you start your journey into web development,
-                    it's crucial to have a solid grasp of these concepts, as they form the backbone
-                    of the digital world.
-                </p>
-
-                <h3>What is the Internet?</h3>
-
-                <p>
-                    The Internet, short for "interconnected networks," is a global network of
-                    computers and devices that communicate with each other through a standardized
-                    set of protocols. It's a vast, decentralized network that connects millions of
-                    computers worldwide, enabling them to share information and resources
-                    seamlessly. Think of the Internet as the infrastructure that makes online
-                    communication and data exchange possible.
-                </p>
-
-                <h3>The World Wide Web (WWW)</h3>
-
-                <p>
-                    The World Wide Web, often referred to as the "Web," is a subset of the Internet.
-                    It's a system of interconnected documents and resources linked by hyperlinks and
-                    URLs (Uniform Resource Locators). When you open a web browser and access a
-                    website, you are interacting with the World Wide Web.
-                </p>
+               
             </div>
         </div>
 
@@ -109,6 +71,14 @@
 
             html.addEventListener("keyup", renderDOM)
             css.addEventListener("keyup", renderDOM)
+
+
+            const lessonDiv = document.querySelector(".lesson")
+            const lessonContent = sessionStorage.getItem("courseContent")
+            if (lessonContent){
+                lessonDiv.innerHTML = lessonContent
+            }
+
         </script>
     </body>
 </html>
