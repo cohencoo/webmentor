@@ -9,20 +9,14 @@
     <body>
         <div class="container">
             <h1 id="topic"></h1>
-            <div class="lesson">
-               
-            </div>
+            <div class="lesson"></div>
         </div>
 
         <center>
             <h1>Test your understanding</h1>
             <hr />
 
-            <iframe
-                src="component/card.html"
-                style="width: 850px; height: 500px;"
-                frameborder="0"
-            ></iframe>
+            <h1>Put flascards here</h1>
 
             <br /><br />
 
@@ -72,13 +66,11 @@
             html.addEventListener("keyup", renderDOM)
             css.addEventListener("keyup", renderDOM)
 
-
             const lessonDiv = document.querySelector(".lesson")
             const lessonContent = sessionStorage.getItem("courseContent")
-            if (lessonContent){
+            if (lessonContent) {
                 lessonDiv.innerHTML = lessonContent
             }
-
         </script>
     </body>
 </html>
