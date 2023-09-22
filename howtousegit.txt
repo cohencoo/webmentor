@@ -4,3 +4,9 @@ to push to github:
 git add -A
 git commit -m "your message/info about what you committed"
 git push
+
+
+
+To get my changes:
+
+git pull

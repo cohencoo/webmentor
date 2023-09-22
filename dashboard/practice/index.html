@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="dashboard.css" />
+        <link rel="stylesheet" href="../dashboard.css" />
     </head>
     <body>
         <div class="container">
@@ -12,19 +12,27 @@
             <div class="lesson"></div>
         </div>
 
-        <center>
+        <div
+            style="
+                background: #222;
+                padding: 2rem;
+                border-radius: 1rem;
+                margin: 4rem auto;
+                max-width: 1000px;
+            "
+        >
             <h1>Test your understanding</h1>
+
+            <br />
+
+            <button>Click to flash</button>
+        </div>
+
+        <center>
             <hr />
-
-            <h1>Put flascards here</h1>
-
-            <br /><br />
-
-            <hr />
-
             <h1>Now apply your skills</h1>
             <p>Use the HTML/CSS editor below to show-off the knowledge you've learned!</p>
-            <br /><br />
+            <br />
         </center>
 
         <div class="testing-area">
@@ -43,7 +51,7 @@
                 <div style="width: 33.33%; background: #333;" id="render"></div>
             </div>
         </div>
-        <script src="nav.js"></script>
+        <script src="../../nav.js"></script>
         <script>
             const html = document.getElementById("html")
             const css = document.getElementById("css")

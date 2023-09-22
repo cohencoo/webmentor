@@ -3,7 +3,8 @@ const courseOutline = [
         module: "Module 1: Introduction to Web Development",
         topics: [
             {
-                module: "1.1. Understanding the Internet and the World Wide Web", content: `<h1 id="topic"></h1>
+                module: "1.1. Understanding the Internet and the World Wide Web",
+                content: `<h1 id="topic"></h1>
             <center>
             <br /><br />
             <iframe
@@ -42,14 +43,16 @@ const courseOutline = [
             It's a system of interconnected documents and resources linked by hyperlinks and
             URLs (Uniform Resource Locators). When you open a web browser and access a
             website, you are interacting with the World Wide Web.
-    </p>`},
+    </p>`,
+            },
         ],
     },
     {
         module: "Module 2: HTML Fundamentals",
         topics: [
             {
-                module: "2.1. HTML Document Structure", content: `
+                module: "2.1. HTML Document Structure",
+                content: `
             <p> 
                 HTML (Hypertext Markup Language) is the standard language used to 
                 create web pages. It consists of a set of elements that structure the content on a web page. 
@@ -67,52 +70,53 @@ const courseOutline = [
                 The <!DOCTYPE> declaration is the first thing you should include in an HTML document. It informs the web browser about the version of HTML being used. For HTML5, the declaration is: 
             </p>
 
-    </p>`},
-            { module: "2.2. HTML Elements and Tags", content: 'n' },
-            { module: "2.3. Creating Headings, Paragraphs, and Line Breaks", content: 'n' },
-            { module: "2.4. Lists (Ordered and Unordered)", content: 'n' },
-            { module: "2.5. Links and Anchors", content: 'n' },
-            { module: "2.6. Images and Multimedia", content: 'n' },
+    </p>`,
+            },
+            { module: "2.2. HTML Elements and Tags", content: "n" },
+            { module: "2.3. Creating Headings, Paragraphs, and Line Breaks", content: "n" },
+            { module: "2.4. Lists (Ordered and Unordered)", content: "n" },
+            { module: "2.5. Links and Anchors", content: "n" },
+            { module: "2.6. Images and Multimedia", content: "n" },
         ],
     },
     {
         module: "Module 3: CSS Fundamentals",
         topics: [
-            { module: "3.1. Introduction to CSS and Its Role in Web Design", content: 'n' },
-            { module: "3.2. CSS Syntax and Selectors", content: 'n' },
-            { module: "3.3. Adding CSS to HTML (Inline, Internal, and External)", content: 'n' },
-            { module: "3.4. Styling Text and Fonts", content: 'n' },
-            { module: "3.5. Working with Colors and Backgrounds", content: 'n' },
-            { module: "3.6. Formatting Margins, Padding, and Borders", content: 'n' },
-            { module: "3.7. Introduction to Box Model", content: 'n' },
-            { module: "3.8. Understanding Display and Position Properties", content: 'n' },
+            { module: "3.1. Introduction to CSS and Its Role in Web Design", content: "n" },
+            { module: "3.2. CSS Syntax and Selectors", content: "n" },
+            { module: "3.3. Adding CSS to HTML (Inline, Internal, and External)", content: "n" },
+            { module: "3.4. Styling Text and Fonts", content: "n" },
+            { module: "3.5. Working with Colors and Backgrounds", content: "n" },
+            { module: "3.6. Formatting Margins, Padding, and Borders", content: "n" },
+            { module: "3.7. Introduction to Box Model", content: "n" },
+            { module: "3.8. Understanding Display and Position Properties", content: "n" },
         ],
     },
     {
         module: "Module 4: Building Web Pages",
         topics: [
-            { module: "4.1. Structuring a Web Page with HTML5 Semantic Elements", content: 'n' },
-            { module: "4.2. Creating Navigation Menus", content: 'n' },
-            { module: "4.3. Designing Forms for User Interaction", content: 'n' },
-            { module: "4.4. Incorporating Multimedia Elements", content: 'n' },
-            { module: "4.5. Adding External Content with iframes", content: 'n' },
-            { module: "4.6. Creating a Responsive Web Design", content: 'n' },
+            { module: "4.1. Structuring a Web Page with HTML5 Semantic Elements", content: "n" },
+            { module: "4.2. Creating Navigation Menus", content: "n" },
+            { module: "4.3. Designing Forms for User Interaction", content: "n" },
+            { module: "4.4. Incorporating Multimedia Elements", content: "n" },
+            { module: "4.5. Adding External Content with iframes", content: "n" },
+            { module: "4.6. Creating a Responsive Web Design", content: "n" },
         ],
     },
     {
         module: "Module 5: Web Development Best Practices",
         topics: [
-            { module: "5.1. Ensuring Accessibility and Semantic Markup", content: 'n' },
-            { module: "5.2. Validating HTML and CSS", content: 'n' },
-        ]
+            { module: "5.1. Ensuring Accessibility and Semantic Markup", content: "n" },
+            { module: "5.2. Validating HTML and CSS", content: "n" },
+        ],
     },
     {
         module: "Module 6: Final Project",
         topics: [
-            { module: "6.1. Applying What You've Learned", content: 'n' },
-            { module: "6.2. Building a Simple Website", content: 'n' },
-            { module: "6.3. Troubleshooting and Debugging", content: 'n' },
-            { module: "6.4. Presenting Your Project", content: 'n' },
+            { module: "6.1. Applying What You've Learned", content: "n" },
+            { module: "6.2. Building a Simple Website", content: "n" },
+            { module: "6.3. Troubleshooting and Debugging", content: "n" },
+            { module: "6.4. Presenting Your Project", content: "n" },
         ],
     },
 ]
@@ -129,11 +133,9 @@ function generateCourseOutline(courseOutline) {
         module.topics.forEach((topic) => {
             const liTopic = document.createElement("li")
 
+            liTopic.onclick = () => (sessionStorage.courseContent = topic.content)
 
-            liTopic.onclick = () => sessionStorage.courseContent = topic.content
-
-
-            liTopic.innerHTML = `<a class="topic" href="practice.html?q=${topic.module}">${topic.module}</a>`
+            liTopic.innerHTML = `<a class="topic" href="practice/?q=${topic.module}">${topic.module}</a>`
             ulTopics.appendChild(liTopic)
         })
 
