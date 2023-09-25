@@ -1,74 +1,57 @@
-.container{
-    width: 95%;
-    margin: auto;
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.create-box{
+
+.create-box {
     width: 380px;
-    margin: auto;
     padding: 20px;
     margin-top: 10px;
     border-radius: 5px;
-    background-color: rgb(194, 162, 159);
+    background-color: rgb(255, 255, 255);
+    color: black;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-.create-box textarea{
+.create-box textarea,
+.create-box input {
     width: 100%;
+    padding: 10px;
     border-radius: 5px;
     font-family: inherit;
     border: 1px solid lightgray;
+    color: black;
 }
 
-.create-box button{
+.create-box button {
     width: fit-content;
 }
 
-.flashcards{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+.flashcards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
     flex-wrap: wrap;
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
+    max-width: 90%;
     margin-top: 10px;
     padding: 0 10px;
+    color: black;
 }
 
-.flashcard{
-    width: 370px;
+.flashcard {
+    width: 100%;
     height: 200px;
     word-wrap: break-word;
     margin: 10px;
     background-color: white;
+    border-radius: 10px;
+    color: black;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-.flashcard h2{
+.flashcard h2 {
     font-size: 1rem;
-}
-
-@media(max-width: 768px){
-    .flashcard{
-        margin: auto;
-    }
-
-    .flashcard{
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-}
-
-@media(max-width: 480px){
-
-    .nav{
-        flex-direction: column;
-        align-items:center
-    }
-    .create-box{
-        width: 100%
-    }
-
-    .flashcard{
-        width: 100%;
-    }
 }

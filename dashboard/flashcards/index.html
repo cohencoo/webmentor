@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../dashboard.css" />
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class = "nav">
-                <h1>Flashcards</h1>
-                <div>
-                    <button onclick= "showCreateCardBox()" >New Card</button>
-                    <button onclick = "delFlashcards()" >Del Cards</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../dashboard.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="nav">
+                    <div style="padding: 0 5rem 0 0;">
+                        <h1>Flashcards</h1>
+                        <p style="margin-top: 1rem; color: #ccc;">
+                            Let's help consolidate your understanding. Create your own flashcards
+                            here and practice them. Below are some flashcards that you can use.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="create-box">
+                            <h2 style="text-align: center; color: rgb(34, 30, 30);">
+                                Create Flashcards
+                            </h2>
+                            <label for="question">Question</label>
+                            <input id="question" />
+                            <br /><br />
+                            <label for="answer">Answer</label>
+                            <textarea id="answer"></textarea>
+                            <br /><br />
+                            <div>
+                                <button onclick="addFlashcard()">Save</button>
+                            </div>
+                        </div>
+                        <br /><br />
+                        <span
+                            id="clear"
+                            style="display: none; color: tomato;"
+                            onclick="delFlashcards()"
+                            >Start over again? This will delete all flashcards.</span
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <div class = "container">
-        <div class = "create-box">
-            <h2 style  = "text-align: center; color: rgb(34, 30, 30);">Create Flashcards</h2>
-            <label for = "question">Question</label>
-            <textarea id = "question"></textarea> 
-            <br>
-            <label for = "answer">Answer</label>
-            <textarea id = "answer"></textarea> 
-            <div>
-                <button onclick="addFlashcard()">Save</button>
-                <button onclick="hideCreateBox()">Close</button>
-            </div>
-        </div>
-        <div class = "flashcards"></div>
-    </div>
+        </header>
+        <hr />
 
-    <script src = "../../nav.js"></script>
-    <script src = "script.js"></script>
+        <div class="flashcards"></div>
 
-</body>
+        <br /><br /><br /><br />
+
+        <script src="../../nav.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>

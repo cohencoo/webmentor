@@ -12,34 +12,28 @@
             <div class="lesson"></div>
         </div>
 
-        <div
-            style="
-                background: #222;
-                padding: 2rem;
-                border-radius: 1rem;
-                margin: 4rem auto;
-                max-width: 1000px;
-            "
-        >
-            <h1>Test your understanding</h1>
+        <div style="background: rgba(255, 255, 255, 0.02); padding: 2rem; text-align: center;">
+            <h1>Need help consolidating your knowledge?</h1>
 
             <br />
-
-            <button>Click to flash</button>
+            <br />
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                <a href="../flashcards/"><button>Practice flashcards</button></a>
+                <a href="#apply"><button>Apply my skills</button></a>
+            </div>
         </div>
 
-        <div style="text-align: center;">
-            <hr />
+        <div id="apply" style="text-align: center; margin-top: 10rem;">
             <h1>Now apply your skills</h1>
         </div>
 
         <div
             style="
-                background: #222;
+                background: rgba(255, 255, 255, 0.05);
                 padding: 2rem;
                 border-radius: 1rem;
-                margin: 4rem auto;
-                max-width: 1000px;
+                margin: 2rem auto 4rem auto;
+                max-width: 1100px;
                 display: flex;
                 gap: 2rem;
                 height: fit-content;
@@ -47,7 +41,7 @@
             "
         >
             <div style="width: 50%;">
-                <h3>Create a JS alert</h3>
+                <h3>Your Task: Create a JS alert</h3>
                 <br />
                 <div style="display: flex; align-items: center; justify-content: space-between;">
                     <div
@@ -77,11 +71,11 @@
                     <div>Console Log and Errors will be shown here</div>
                 </div>
 
-                <div class="success">
+                <div style="opacity: 0;" class="success">
                     <h3>Success</h3>
                     <br />
                     <p>Well done! You have completed the lesson.</p>
-                    <a style="color: skyblue;" href="../">Go back to dashboard</a>
+                    <a style="color: skyblue;" href="#coding">Move onto next task</a>
                 </div>
             </div>
         </div>
@@ -93,6 +87,9 @@
             function runJS() {
                 try {
                     eval(js.value)
+                    if (js.value.includes("alert")) {
+                        document.querySelector(".success").style.opacity = 1
+                    }
                 } catch (err) {
                     terminal.innerHTML += `<div style="color: red;">${err}</div>`
                 }
@@ -105,11 +102,11 @@
             }
         </script>
 
-        <div style="text-align: center; margin-bottom: 2rem;">
+        <div id="coding" style="text-align: center; margin-bottom: 2rem;">
             <hr />
             <h1>Create a HTML select dropdown.</h1>
             <br />
-            <p>Refer to <a style="color: skyblue;" href="../">Section 1.1 for HTML tags</a></p>
+            <p>Refer to <a style="color: skyblue;" href="../">Section 2.2 for HTML tags</a></p>
         </div>
 
         <div class="testing-area">
@@ -118,7 +115,7 @@
                     display: flex;
                     height: 600px;
                     gap: 10px;
-                    background: #222;
+                    background: rgba(255, 255, 255, 0.05);
                     padding: 1rem;
                     justify-content: space-between;
                 "
