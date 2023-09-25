@@ -28,27 +28,157 @@
             <button>Click to flash</button>
         </div>
 
-        <center>
+        <div style="text-align: center;">
             <hr />
             <h1>Now apply your skills</h1>
-            <p>Use the HTML/CSS editor below to show-off the knowledge you've learned!</p>
+        </div>
+
+        <div
+            style="
+                background: #222;
+                padding: 2rem;
+                border-radius: 1rem;
+                margin: 4rem auto;
+                max-width: 1000px;
+                display: flex;
+                gap: 2rem;
+                height: fit-content;
+                justify-content: space-between;
+            "
+        >
+            <div style="width: 50%;">
+                <h3>Create a JS alert</h3>
+                <br />
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div
+                        style="
+                            margin: 0 0 0 0;
+                            padding: 8px 3rem;
+                            width: fit-content;
+                            background: rgba(255, 196, 0, 0.165);
+                            border-radius: 10px 10px 0 0;
+                        "
+                    >
+                        main.js
+                    </div>
+                    <button
+                        style="border-radius: 100rem; padding: 4px 2rem; font-size: 1rem;"
+                        id="run"
+                    >
+                        Run
+                    </button>
+                </div>
+                <textarea id="js" style="height: 25rem; width: 100%;"></textarea>
+            </div>
+            <div style="width: 50%; height: 25rem;">
+                <h3>Terminal</h3>
+                <br />
+                <div id="terminal">
+                    <div>Console Log and Errors will be shown here</div>
+                </div>
+
+                <div class="success">
+                    <h3>Success</h3>
+                    <br />
+                    <p>Well done! You have completed the lesson.</p>
+                    <a style="color: skyblue;" href="../">Go back to dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const js = document.getElementById("js")
+            const terminal = document.getElementById("terminal")
+
+            function runJS() {
+                try {
+                    eval(js.value)
+                } catch (err) {
+                    terminal.innerHTML += `<div style="color: red;">${err}</div>`
+                }
+            }
+
+            document.getElementById("run").addEventListener("click", runJS)
+
+            console.log = function (message) {
+                terminal.innerHTML += `<div>${message}</div>`
+            }
+        </script>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <hr />
+            <h1>Create a HTML select dropdown.</h1>
             <br />
-        </center>
+            <p>Refer to <a style="color: skyblue;" href="../">Section 1.1 for HTML tags</a></p>
+        </div>
 
         <div class="testing-area">
             <div
                 style="
                     display: flex;
-                    height: 500px;
+                    height: 600px;
                     gap: 10px;
                     background: #222;
                     padding: 1rem;
                     justify-content: space-between;
                 "
             >
-                <textarea id="html" placeholder="Write your HTML here..."></textarea>
-                <textarea id="css" placeholder="Write your CSS here..."></textarea>
-                <div style="width: 33.33%; background: #333;" id="render"></div>
+                <div style="display: flex; flex-direction: column; width: 50%; gap: 1rem;">
+                    <div style="height: 100%;">
+                        <div
+                            style="
+                                margin: 0 0 0 0;
+                                padding: 6px 3rem;
+                                width: fit-content;
+                                background: rgba(255, 136, 0, 0.165);
+                                border-radius: 10px 10px 0 0;
+                            "
+                        >
+                            index.html
+                        </div>
+                        <textarea
+                            id="html"
+                            style="width: 100%; height: 90%;"
+                            placeholder="Write your HTML here..."
+                        >
+<select>
+    <option> Hello 1 </option>
+    <option> Hello 2 </option>
+    <option> Hello 3 </option>
+</select>
+                          </textarea
+                        >
+                    </div>
+                    <div style="height: 100%;">
+                        <div
+                            style="
+                                margin: 0 0 0 0;
+                                padding: 6px 3rem;
+                                width: fit-content;
+                                background: rgba(0, 132, 255, 0.165);
+                                border-radius: 10px 10px 0 0;
+                            "
+                        >
+                            styles.css
+                        </div>
+                        <textarea
+                            id="css"
+                            style="width: 100%; height: 90%;"
+                            placeholder="Write your CSS here..."
+                        >
+select {
+    padding: 1rem 4rem;
+    border-radius: 100rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    </textarea
+                        >
+                    </div>
+                </div>
+                <div style="width: 50%; border-radius: 8px; background: #333;" id="render"></div>
             </div>
         </div>
         <script src="../../nav.js"></script>

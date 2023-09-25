@@ -110,7 +110,6 @@ ul {
 }
 
 textarea {
-    width: 33.33%;
     height: 100%;
     color: white;
     background: transparent;
@@ -152,4 +151,33 @@ textarea {
     100% {
         transform: translateY(-40%);
     }
+}
+
+#terminal {
+    background-color: black;
+    height: 75%;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+
+#terminal div {
+    color: white;
+    font-family: monospace;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    padding: 7px 7px 7px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#terminal div:before {
+    content: "$ ";
+}
+
+.success {
+    background: rgba(154, 255, 45, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
 }

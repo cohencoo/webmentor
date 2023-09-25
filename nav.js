@@ -9,6 +9,9 @@ nav.innerHTML = `
         <a ${
             location.pathname.split("/")[2] === "practice" ? 'class="active"' : ""
         } href="/dashboard/practice/">Practice</a>
+        <a ${
+            location.pathname.split("/")[2] === "flashcards" ? 'class="active"' : ""
+        } href="/dashboard/flashcards/">Flashcards</a>
     </div>
     <div class="buttons">
         <button>Logout</button>
