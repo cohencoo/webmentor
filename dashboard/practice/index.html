@@ -83,13 +83,11 @@
         <script>
             const js = document.getElementById("js")
             const terminal = document.getElementById("terminal")
+            const preserveAlert = window.alert
 
             function runJS() {
                 try {
                     eval(js.value)
-                    if (js.value.includes("alert")) {
-                        document.querySelector(".success").style.opacity = 1
-                    }
                 } catch (err) {
                     terminal.innerHTML += `<div style="color: red;">${err}</div>`
                 }
@@ -97,6 +95,10 @@
 
             document.getElementById("run").addEventListener("click", runJS)
 
+            alert = function (message) {
+                document.querySelector(".success").style.opacity = 1
+                preserveAlert(message)
+            }
             console.log = function (message) {
                 terminal.innerHTML += `<div>${message}</div>`
             }
